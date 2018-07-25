@@ -1,3 +1,3 @@
 # jQuery To-do list App
 
-##A to-do list app built with jQuery
+## A to-do list app built with jQuery
