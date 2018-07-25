@@ -85,14 +85,3 @@ input:focus {
 	color: gray;
 	text-decoration: line-through;
 }
-
-@media screen and (max-width:600px) {
-	#container {
-		width: 300px;
-	}
-
-	ul, input {
-		font-size: 15px;
-	}
-
-}
