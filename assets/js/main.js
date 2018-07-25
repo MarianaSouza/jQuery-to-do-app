@@ -12,7 +12,7 @@ $(document).ready(function(){
 		if(event.which === 13){
 			//grabbing new todo text from input
 			var todoText = $(this).val();
-			maximumLenght = 15;
+			maximumLenght = 20;
 			if(todoText.length > maximumLenght)
 			{
 			 alert("Your new task is too long, write a shorter one.");
@@ -39,7 +39,7 @@ $(document).ready(function(){
 	//Click on edit to edit Todo
 	$("ul").on("click", ".edit", function(event){
 		var newTodoText = prompt("Edit the task.");
-		maximumLenght = 15;
+		maximumLenght = 20;
 			if(newTodoText.length > maximumLenght)
 			{
 			 	alert("Your new task is too long, write a shorter one.");
