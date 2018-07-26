@@ -26,27 +26,27 @@ $(document).ready(function(){
 		}
 	});
 
-	//Click on trash to delete Todo
-	$("ul").on("click", ".trash", function(event){
-		//To make the remove effect happens after the fade, we put it in a callback function
-		$(this).parent().fadeOut(500, function(){
-			$(this).remove();
-		});
-		//to prevent event bubbling from span to its parents (li, ul, container, etc...), we use event.stopPropagation() method.
-		event.stopPropagation();
-	});
-
 	//Click on edit to edit Todo
-	$("ul").on("click", ".edit", function(event){
+	$("ul").on("click", "span.edit", function(event){
 		var newTodoText = prompt("Edit the task.");
 		maximumLenght = 20;
 			if(newTodoText.length > maximumLenght)
 			{
 			 	alert("Your new task is too long, write a shorter one.");
-				return;
+				return false;
 			}else{
 				$(this).parent().html("<li><span class='trash'><i class='fa fa-trash'></i></span> " + newTodoText + "<span class='edit'><i class='fa fa-edit'></i></span></li>");
 			}
+		event.stopPropagation();
+	});
+
+	//Click on trash to delete Todo
+	$("ul").on("click", "span.trash", function(event){
+		//To make the remove effect happens after the fade, we put it in a callback function
+		$(this).parent().fadeOut(500, function(){
+			$(this).remove();
+		});
+		//to prevent event bubbling from span to its parents (li, ul, container, etc...), we use event.stopPropagation() method.
 		event.stopPropagation();
 	});
 
