@@ -30,6 +30,7 @@ li {
 	height: 40px;
 	line-height: 40px;
 	color: #666;
+	font-size: 18px;
 }
 
 li:nth-child(2n) {
@@ -59,7 +60,7 @@ li:hover span {
 }
 
 input {
-	font-size: 18px;
+	font-size: 20px;
 	color: #2980b9;
 	background-color: #f7f7f7;
 	width: 100%;
@@ -74,6 +75,19 @@ input:focus {
 	outline: none;
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #a9a9a9;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #a9a9a9;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #a9a9a9;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #a9a9a9;
+}
+
 .content-list {
 	margin: 100px auto;
 	padding-right: 0;
@@ -85,4 +99,15 @@ input:focus {
 .completed {
 	color: gray;
 	text-decoration: line-through;
+}
+
+@media only screen and (max-width:480px) {
+	li {
+		font-size: 14px;
+	}
+
+	input {
+		font-size: 16px;
+	}
+
 }
