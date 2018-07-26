@@ -30,7 +30,7 @@ li {
 	height: 40px;
 	line-height: 40px;
 	color: #666;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 li:nth-child(2n) {
@@ -60,7 +60,7 @@ li:hover span {
 }
 
 input {
-	font-size: 20px;
+	font-size: 18px;
 	color: #2980b9;
 	background-color: #f7f7f7;
 	width: 100%;
@@ -109,5 +109,10 @@ input:focus {
 	input {
 		font-size: 16px;
 	}
+
+	.content-list{
+		margin: 70px auto;
+	}
+
 
 }
